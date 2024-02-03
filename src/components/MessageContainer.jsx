@@ -1,18 +1,33 @@
+import { useDispatch, useSelector } from "react-redux";
 import Messages from "../components/Messages";
 import MessageInput from "./MessageInput";
+import { setSelectedConversation } from "../features/conversations/conversationsSlice";
+import { useEffect } from "react";
 
 const MessageContainer = () => {
-  const noChatSelected = true;
+  const dispatch = useDispatch();
+  const selectedConversation = useSelector(
+    (state) => state.conversations.selectedConversation
+  );
+
+  useEffect(() => {
+    return () => {
+      dispatch(setSelectedConversation(null));
+    };
+  }, [dispatch]);
+
   return (
     <div className="md:min-w-[450px] flex flex-col">
-      {noChatSelected ? (
+      {!selectedConversation ? (
         <NoChatSelected />
       ) : (
         <>
           {/* Header */}
           <div className="bg-slate-500 px-4 py-2 mb-2">
             <span className="label-text">To: </span>
-            <span className="text-gray-900 font-bold">John Doe</span>
+            <span className="text-gray-900 font-bold">
+              {selectedConversation.fullname}
+            </span>
           </div>
           <Messages />
           <MessageInput />
