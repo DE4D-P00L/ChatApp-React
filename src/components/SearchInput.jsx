@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import useGetConversations from "../hooks/useGetConversations";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { setSelectedConversation } from "../features/conversations/conversationsSlice";
 
 const SearchInput = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
-  const selectedConversation = useSelector(
-    (state) => state.conversations.selectedConversation
-  );
   const { conversations } = useGetConversations();
   const handleSubmit = (e) => {
     e.preventDefault();

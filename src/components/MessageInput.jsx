@@ -3,12 +3,7 @@ import { useForm } from "react-hook-form";
 import useSendMessage from "../hooks/useSendMessage";
 
 const MessageInput = () => {
-  const {
-    register,
-    handleSubmit,
-    resetField,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, resetField } = useForm();
 
   const { loading, sendMessage } = useSendMessage();
 
