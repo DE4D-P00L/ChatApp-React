@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 
 const useSendMessage = () => {
   const messages = useSelector((state) => state.conversations.messages);
+  const user = useSelector((state) => state.auth.user);
   const selectedConversation = useSelector(
     (state) => state.conversations.selectedConversation
   );
@@ -18,7 +19,12 @@ const useSendMessage = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/messages/send/${
           selectedConversation._id
         }`,
-        message
+        {
+          data: message,
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
       );
       if (data.error) throw new Error(data.error);
       dispatch(setMessages([...messages, data]));

@@ -7,6 +7,7 @@ import axios from "axios";
 const useGetMessages = () => {
   const [loading, setLoading] = useState(false);
   const messages = useSelector((state) => state.conversations.messages);
+  const user = useSelector((state) => state.auth.user);
   const selectedConversation = useSelector(
     (state) => state.conversations.selectedConversation
   );
@@ -19,7 +20,8 @@ const useGetMessages = () => {
         const { data } = await axios.get(
           `${import.meta.env.VITE_BACKEND_URL}/api/messages/${
             selectedConversation._id
-          }`
+          }`,
+          { headers: { Authorization: `Bearer ${user.token}` } }
         );
         if (data.error) throw new Error(data.error);
         dispatch(setMessages(data));
