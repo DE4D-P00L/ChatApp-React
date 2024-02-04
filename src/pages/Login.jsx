@@ -13,7 +13,6 @@ const Login = () => {
   const { loading, login } = useLogin();
 
   const onSubmit = async (data) => {
-    console.log(data);
     await login(data);
   };
 

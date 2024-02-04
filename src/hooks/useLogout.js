@@ -10,7 +10,9 @@ const useLogout = () => {
   const logout = async () => {
     try {
       setLoading(true);
-      const res = await axios.post("/api/auth/logout");
+      const res = await axios.post(
+        import.meta.env.VITE_BACKEND_URL + "/api/auth/logout"
+      );
       if (res.data.error) {
         throw new Error(res.data.error);
       }

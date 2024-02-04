@@ -17,7 +17,9 @@ const useGetMessages = () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          `/api/messages/${selectedConversation._id}`
+          `${import.meta.env.VITE_BACKEND_URL}/api/messages/${
+            selectedConversation._id
+          }`
         );
         if (data.error) throw new Error(data.error);
         dispatch(setMessages(data));

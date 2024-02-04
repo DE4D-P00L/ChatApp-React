@@ -15,7 +15,9 @@ const useSendMessage = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `/api/messages/send/${selectedConversation._id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/messages/send/${
+          selectedConversation._id
+        }`,
         message
       );
       if (data.error) throw new Error(data.error);

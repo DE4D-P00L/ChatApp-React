@@ -10,10 +10,13 @@ const useLogin = () => {
   const login = async ({ username, password }) => {
     try {
       setLoading(true);
-      const { data } = await axios.post("/api/auth/login", {
-        username,
-        password,
-      });
+      const { data } = await axios.post(
+        import.meta.env.VITE_BACKEND_URL + "/api/auth/login",
+        {
+          username,
+          password,
+        }
+      );
       if (data.error) throw new Error(data.error);
       toast.success("Welcome " + data.fullname);
       dispatch(setUser(data));

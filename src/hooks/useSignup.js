@@ -17,13 +17,16 @@ const useSignup = () => {
   }) => {
     try {
       setLoading(true);
-      const res = await axios.post("/api/auth/signup", {
-        fullname,
-        username,
-        password,
-        confirmPassword,
-        gender,
-      });
+      const res = await axios.post(
+        import.meta.env.VITE_BACKEND_URL + "/api/auth/signup",
+        {
+          fullname,
+          username,
+          password,
+          confirmPassword,
+          gender,
+        }
+      );
       if (res.error) throw new Error(res.error);
       dispatch(setUser(res.data));
     } catch (error) {

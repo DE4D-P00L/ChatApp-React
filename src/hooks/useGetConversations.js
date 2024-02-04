@@ -10,7 +10,9 @@ const useGetConversations = () => {
     const getConversations = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get("/api/users");
+        const { data } = await axios.get(
+          import.meta.env.VITE_BACKEND_URL + "/api/users"
+        );
         if (data.error) throw new Error(data.error);
         setConversations(data);
       } catch (error) {
