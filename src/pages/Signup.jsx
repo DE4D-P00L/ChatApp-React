@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
 import useSignup from "../hooks/useSignup.js";
 
 const Signup = () => {
