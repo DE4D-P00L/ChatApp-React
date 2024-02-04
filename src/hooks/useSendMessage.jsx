@@ -19,8 +19,8 @@ const useSendMessage = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/messages/send/${
           selectedConversation._id
         }`,
+        message,
         {
-          data: message,
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

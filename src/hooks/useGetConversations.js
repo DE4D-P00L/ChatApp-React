@@ -29,7 +29,7 @@ const useGetConversations = () => {
       }
     };
     getConversations();
-  }, []);
+  }, [user.token]);
 
   return { loading, conversations };
 };

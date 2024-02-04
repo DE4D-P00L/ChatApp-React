@@ -32,7 +32,7 @@ const useGetMessages = () => {
       }
     };
     if (selectedConversation?._id) getMessages();
-  }, [dispatch, selectedConversation?._id]);
+  }, [dispatch, selectedConversation?._id, user.token]);
 
   return { loading, messages };
 };
