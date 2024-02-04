@@ -19,8 +19,7 @@ const useSendMessage = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/messages/send/${
           selectedConversation._id
         }`,
-        { message },
-        { headers: { Authorization: `Bearer ${user.token}` } }
+        { message, headers: { Authorization: `Bearer ${user.token}` } }
       );
       if (data.error) throw new Error(data.error);
       dispatch(setMessages([...messages, data]));
