@@ -10,6 +10,7 @@ const useLogin = () => {
   const login = async ({ username, password }) => {
     try {
       setLoading(true);
+      console.log(import.meta.env.VITE_BACKEND_URL);
       const { data } = await axios.post(
         import.meta.env.VITE_BACKEND_URL + "/api/auth/login",
         {
