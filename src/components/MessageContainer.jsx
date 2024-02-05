@@ -23,9 +23,9 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* Header */}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
+          <div className="bg-[#202c33] px-4 py-2 mb-2">
             <span className="label-text">To: </span>
-            <span className="text-gray-900 font-bold">
+            <span className="text-white font-bold">
               {selectedConversation.fullname}
             </span>
           </div>
