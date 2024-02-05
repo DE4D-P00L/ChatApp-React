@@ -24,12 +24,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #121212;
+  background: #005c4b;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #242424;
+  background: #007c66;
 }
 
 /* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
