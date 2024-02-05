@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./assets/pexels-johannes-plenio-1103970.jpg");
+  background: #0c1317;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.back-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/bg-img.png");
 }
 
 /* dark mode looking scrollbar */
