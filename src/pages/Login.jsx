@@ -59,7 +59,9 @@ const Login = () => {
             {"Don't have and account?"}
           </Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2" type="submit">
+            <button
+              className="btn btn-block btn-sm mt-2 bg-[#005c4b] text-white"
+              type="submit">
               {loading ? (
                 <span className="loading loading-spinner"></span>
               ) : (
