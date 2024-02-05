@@ -4,6 +4,12 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
+import axios from "axios";
+
+axios.interceptors.request.use((request) => {
+  request.headers.testValue = "aaaaa";
+  return request;
+});
 
 function App() {
   const user = useSelector((state) => state.auth.user);
