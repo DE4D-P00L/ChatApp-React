@@ -1,8 +1,54 @@
-# React + Vite
+# Vite React ChatApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This project is a real-time chat application built with Vite, React, and various powerful libraries:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite:** Fast and efficient development environment for modern web apps.
+- **React:** JavaScript library for building interactive user interfaces.
+- **Axios:** Flexible HTTP client for API requests.
+- **React-Redux & Redux-Toolkit:** Simplified state management solutions.
+- **React-Hook-Form:** Declarative and performant form handling library.
+- **React-Hot-Toast:** Customizable notification system for feedback.
+- **React-Icons:** Comprehensive library of popular icons for UI elements.
+- **React-Router-Dom:** Streamlined routing for React applications.
+- **Societ.io-Client:** Real-time messaging library for interactive chat functionality.
+- **Tailwind CSS & DaisyUI:** Utility-first and component-based UI frameworks for consistent styling.
+- **localStorage:** Browser storage for securely storing the JWT token.
+
+## Key Features
+
+- Real-time chat conversations using `societ.io-client`.
+- User authentication and management with JWT-based authorization.
+- Intuitive and user-friendly UI built with Tailwind CSS and DaisyUI.
+- Efficient form handling with `react-hook-form`.
+- Real-time feedback on actions and events with `react-hot-toast`.
+- Centralized state management with `react-redux` and `redux-toolkit`.
+- Seamless navigation and routing within the app using `react-router-dom`.
+
+## Getting Started
+
+1. **Clone the repository:** `git clone https://github.com/DE4D-P00L/ChatApp-React.git`
+2. **Install dependencies:** `npm install`
+3. **Start the development server:** `npm run dev`
+4. **Access the app:** http://localhost:5173/
+
+## Authorization and JWT Storage
+
+1. Implement an authentication API or service to issue JWTs upon login and signup.
+2. Handle login requests, storing the received JWT securely in `localStorage`:
+3. Used axios packege to attach JWT token in the Authorization headers.
+4. Implemented JWT expiration handling.
+
+## Component Libraries
+
+- Tailwind CSS: [https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)
+- DaisyUI: [https://daisyui.com/docs/install](https://daisyui.com/docs/install)
+
+## License
+
+MIT License (LICENSE file).
+
+## Author
+
+- Prashant
