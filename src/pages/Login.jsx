@@ -20,12 +20,12 @@ const Login = () => {
       <div className="w-full p-6 rounded-lg shadow-md bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[20%]">
         <h1 className="text-3xl font-semibold text-center text-gray-300 mb-5">
           Login
-          <span className="text-blue-400"> ChatApp</span>
+          <span className="text-[#005c4b]"> ChatApp</span>
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">Username</span>
+              <span className="text-base label-text text-white">Username</span>
             </label>
             <input
               type="text"
@@ -41,7 +41,7 @@ const Login = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <input
               type="password"

@@ -25,12 +25,12 @@ const Signup = () => {
       <div className="w-full p-6 rounded-lg shadow-md bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-[20%]">
         <h1 className="text-3xl font-semibold text-center text-gray-300 mb-5">
           Sign Up
-          <span className="text-blue-400"> ChatApp</span>
+          <span className="text-[#005c4b]"> ChatApp</span>
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">Full Name</span>
+              <span className="text-base label-text text-white">Full Name</span>
             </label>
             <input
               type="text"
@@ -44,7 +44,7 @@ const Signup = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">Username</span>
+              <span className="text-base label-text text-white">Username</span>
             </label>
             <input
               type="text"
@@ -60,7 +60,7 @@ const Signup = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <input
               type="password"
@@ -74,7 +74,7 @@ const Signup = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text text-black">
+              <span className="text-base label-text text-white">
                 Confirm Password
               </span>
             </label>
@@ -100,7 +100,7 @@ const Signup = () => {
                   type="radio"
                   name="gender"
                   value="male"
-                  className="border-slate-900 radio"
+                  className="border-white radio"
                   {...register("gender", {
                     required: "Please select a gender",
                   })}
@@ -114,7 +114,7 @@ const Signup = () => {
                   type="radio"
                   name="gender"
                   value="female"
-                  className="border-slate-900 radio"
+                  className="border-white radio"
                   {...register("gender", {
                     required: "Please select a gender",
                   })}
