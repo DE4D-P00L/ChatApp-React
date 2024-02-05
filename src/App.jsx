@@ -8,7 +8,8 @@ import { useSelector } from "react-redux";
 function App() {
   const user = useSelector((state) => state.auth.user);
   return (
-    <div className="p-4 h-screen flex items-center justify-center relative-to-content bg-transparent">
+    <div className="p-4 h-screen w-full bg-transparent flex items-center">
+      {/* <div className="p-4 h-screen flex items-center justify-center relative-to-content bg-transparent"> */}
       <Routes>
         <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />

@@ -1,11 +1,20 @@
+import { useState } from "react";
 import MessageContainer from "../components/MessageContainer";
 import Sidebar from "../components/Sidebar";
 
 const Home = () => {
+  const [showChats, setShowChats] = useState(true);
   return (
-    <div className="flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-[#1a272e]">
-      <Sidebar />
-      <MessageContainer />
+    <div className="flex sm:flex-row flex-col min-h-[550px] w-full rounded-lg overflow-hidden max-w-5xl mx-auto bg-[#1a272e] h-full relative max-h-[700px]">
+      <div
+        className={`w-full sm:w-fit h-full ${
+          showChats ? "hidden sm:flex" : "flex"
+        }`}>
+        <Sidebar showChats={showChats} setShowChats={setShowChats} />
+      </div>
+      <div className={`w-full h-full ${showChats ? "flex" : "hidden sm:flex"}`}>
+        <MessageContainer showChats={showChats} setShowChats={setShowChats} />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import useGetConversations from "../hooks/useGetConversations";
 import Conversation from "./Conversation";
 
-const Conversations = () => {
+const Conversations = ({ showChats, setShowChats }) => {
   const { loading, conversations } = useGetConversations();
 
   return (
@@ -9,11 +9,12 @@ const Conversations = () => {
       {loading ? <span className="loading loading-spinner"></span> : null}
       {!loading &&
         conversations.map((conversation, i) => (
-          <Conversation
-            key={conversation._id}
-            conversation={conversation}
-            lastIndex={i === conversations.length - 1}
-          />
+          <div key={conversation._id} onClick={() => setShowChats(true)}>
+            <Conversation
+              conversation={conversation}
+              lastIndex={i === conversations.length - 1}
+            />
+          </div>
         ))}
     </div>
   );
