@@ -93,7 +93,7 @@ const Signup = () => {
               <p className="text-red-500">{errors.confirmPassword.message}</p>
             )}
           </div>
-          <div className="flex gap-2 my-2 flex-col">
+          <div className="flex gap-2 my-4 flex-col">
             <div className="form-control">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -128,11 +128,11 @@ const Signup = () => {
           </div>
           <Link
             to="/login"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">
+            className="text-sm hover:underline hover:text-blue-600 inline-block">
             {"Already have and account?"}
           </Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2 border border-slate-700 bg-[#005c4b] text-white">
+            <button className="w-full py-2.5 font-bold rounded-md mt-2 bg-[#005c4b] text-white hover:bg-[#2c3337]">
               {loading ? (
                 <span className="loading loading-spinner"></span>
               ) : (

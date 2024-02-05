@@ -55,12 +55,12 @@ const Login = () => {
           </div>
           <Link
             to="/signup"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">
+            className="text-sm hover:underline hover:text-blue-600 mt-4 mb-2 inline-block">
             {"Don't have and account?"}
           </Link>
           <div>
             <button
-              className="btn btn-block btn-sm mt-2 bg-[#005c4b] text-white"
+              className="w-full py-2.5 font-bold rounded-md mt-2 bg-[#005c4b] text-white hover:bg-[#2c3337]"
               type="submit">
               {loading ? (
                 <span className="loading loading-spinner"></span>
