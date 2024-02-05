@@ -23,7 +23,7 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* Header */}
-          <div className="bg-[#202c33] px-4 py-2 mb-2">
+          <div className="bg-[#202c33] px-4 py-2 mb-2 flex items-center gap-2">
             <div className="chat-image avatar">
               <div className="w-10 rounded-full">
                 <img src={selectedConversation?.profilePic} alt="avatar" />
