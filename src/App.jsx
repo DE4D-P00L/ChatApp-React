@@ -7,7 +7,8 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 axios.interceptors.request.use((request) => {
-  request.headers.testValue = "aaaaa";
+  request.headers.authorization =
+    JSON.parse(localStorage.getItem("user")).token || null;
   return request;
 });
 
