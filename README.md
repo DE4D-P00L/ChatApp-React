@@ -31,7 +31,11 @@ This project is a real-time chat application built with Vite, React, and various
 1. **Clone the repository:** `git clone https://github.com/DE4D-P00L/ChatApp-React.git`
 2. **Install dependencies:** `npm install`
 3. **Start the development server:** `npm run dev`
-4. **Access the app:** http://localhost:5173/
+4. **Access the app:** `http://localhost:5173/`
+
+## Environment variables
+
+- VITE_BACKEND_URL=`Your API URL`
 
 ## Authorization and JWT Storage
 
