@@ -10,8 +10,9 @@ const Message = ({ message }) => {
 
   return (
     <div className={`chat ${chatStyle}`}>
-      <div className={`chat-bubble text-white ${chatBg} pb-2`}>
-        {message.message}
+      <div
+        className={`chat-bubble text-white ${chatBg} pb-2  max-w-xs md:max-w-md`}>
+        <p className="break-words">{message.message}</p>
       </div>
       <div
         className={`chat-footer opacity-50 text-xs flex gap-1 items-center text-gray-300`}>
