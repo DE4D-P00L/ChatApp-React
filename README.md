@@ -1,5 +1,8 @@
 # Vite React ChatApp
 
+[Visit Live App](https://chat-app-r2oe.onrender.com)
+_\*on first run server may take upto 50s to start_
+
 ## Introduction
 
 This project is a real-time chat application built with Vite, React, and various powerful libraries:
