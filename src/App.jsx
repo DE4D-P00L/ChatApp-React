@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const user = useSelector((state) => state.auth.user);
@@ -17,6 +18,7 @@ function App() {
           path="/signup"
           element={user ? <Navigate to="/" /> : <Signup />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
     </div>
