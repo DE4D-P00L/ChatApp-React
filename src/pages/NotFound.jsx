@@ -1,22 +1,28 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import image from "../assets/404.png";
+import { GiClick } from "react-icons/gi";
 
-const NotFound = () => {
+function NotFound() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800">
-      <div className="text-center max-w-md">
-        <h1 className="text-3xl font-bold mb-6 text-gray-700 dark:text-white">
-          {`Whoops! This page doesn't exist.`}
+    <div className="w-full h-full grid place-items-center">
+      <div className="max-w-[600px] flex flex-col justify-center items-center text-white p-4">
+        <div className="relative">
+          <img src={image} alt="" className="object-cover drop-shadow-2xl" />
+        </div>
+        <h1 className="text-3xl font-bold md:text-5xl my-5">
+          {`Hey there, space cadet!`}
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 mb-6">
-          {`The page you're looking for was not found. It may have been removed,
-          renamed, or never existed in the first place.`}
+        <p className="text-center text-sm md:text-xl">
+          {`Looks like you've gotten a little lost. Let's help you find your way
+        back on track.`}
         </p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
-          {`Go Back Home`}
-        </button>
+        <Link to="/" className="flex items-end gap-1  underline text-xl my-3">
+          Home
+          <GiClick />
+        </Link>
       </div>
     </div>
   );
-};
+}
 
 export default NotFound;
