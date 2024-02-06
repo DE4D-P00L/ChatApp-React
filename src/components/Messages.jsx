@@ -3,9 +3,13 @@ import useGetMessages from "../hooks/useGetMessages";
 import Message from "./Message";
 import MessageSkeleton from "./Skeletons/MessageSkeleton";
 import useListenMessages from "../hooks/useListenMessages";
+import { useSelector } from "react-redux";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  const selectedConversation = useSelector(
+    (state) => state.conversations.selectedConversation
+  );
   useListenMessages();
   const lastMessageRef = useRef(null);
   useEffect(() => {
@@ -21,11 +25,18 @@ const Messages = () => {
       )}
       {!loading &&
         messages.length > 0 &&
-        messages.map((message) => (
-          <div key={message._id} ref={lastMessageRef}>
-            <Message message={message} />
-          </div>
-        ))}
+        messages.map((message) => {
+          if (
+            message.receiverId === selectedConversation._id ||
+            message.senderId === selectedConversation._id
+          ) {
+            return (
+              <div key={message._id} ref={lastMessageRef}>
+                <Message message={message} />
+              </div>
+            );
+          }
+        })}
     </div>
   );
 };
