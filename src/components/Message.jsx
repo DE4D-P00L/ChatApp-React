@@ -11,7 +11,7 @@ const Message = ({ message }) => {
   return (
     <div className={`chat ${chatStyle}`}>
       <div
-        className={`chat-bubble text-white ${chatBg} pb-2  max-w-xs md:max-w-md `}>
+        className={`chat-bubble text-white ${chatBg} pb-2  max-w-xs md:max-w-md`}>
         <p className="break-words">{message.message}</p>
       </div>
       <div
