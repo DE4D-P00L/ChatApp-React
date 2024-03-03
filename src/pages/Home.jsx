@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 const Home = () => {
   const [showChats, setShowChats] = useState(false);
   return (
-    <div className="flex sm:flex-row flex-col min-h-[550px] w-full rounded-lg overflow-hidden max-w-5xl mx-auto bg-[#1a272e] h-[calc(100vh-40px)] relative sm:max-h-[700px]">
+    <div className="flex sm:flex-row flex-col min-h-[550px] w-full rounded-lg overflow-hidden max-w-5xl mx-auto bg-[#1a272e] h-[calc(100dvh-40px)] relative sm:max-h-[700px]">
       <div
         className={`w-full sm:w-fit h-full ${
           showChats ? "hidden sm:flex" : "flex"
